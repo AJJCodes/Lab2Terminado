@@ -98,8 +98,8 @@ function agregarFilas() {
     // Agregar filas
     for (var i = 0; i < cantidad; i++) {
         var fila = document.createElement("tr");
-        fila.innerHTML = '<th scope="row">' + (i + 1) + '</th>' +
-                         '<td contenteditable="true" id="instruccion' + (i + 1) + '">' + obtenerValorPredeterminado(i + 1) + '</td>';
+        fila.innerHTML = '<th style="color: white;" scope="row">' + (i + 1) + '</th>' +
+                         '<td style="color: white;" contenteditable="true" id="instruccion' + (i + 1) + '">' + obtenerValorPredeterminado(i + 1) + '</td>';
         tablaContainer.appendChild(fila);
     }
 }
@@ -159,17 +159,17 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     calculoAnchoPeriodo.innerHTML = `
         <h5 class="mb-4 text-center">Ancho de Perido</h5>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Segmentado</th>
-                    <th scope="col">Secuencial</th>
+                    <th style="color: white;" scope="col">Segmentado</th>
+                    <th style="color: white;" scope="col">Secuencial</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>${aPSeg.toFixed(2)} ns</td>                
-                    <td>${aPSec.toFixed(2)} ns</td>
+                    <td style="color: white;">${aPSeg.toFixed(2)} ns</td>                
+                    <td style="color: white;">${aPSec.toFixed(2)} ns</td>
                 </tr>                                
             </tbody>
         </table>
@@ -177,17 +177,17 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     calculoFrecuencia.innerHTML = `
         <h5 class="mb-4 text-center">Frecuencia</h5>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Segmentado</th>
-                    <th scope="col">Secuencial</th>
+                    <th style="color: white;" scope="col">Segmentado</th>
+                    <th style="color: white;" scope="col">Secuencial</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>${calcularFrecuencia(opcCPU,aPSeg,aPSec).frecuenciaSegmentada} MHz</td>                
-                    <td>${calcularFrecuencia(opcCPU,aPSeg,aPSec).frecuenciaSecuencial} MHz</td>
+                    <td style="color: white;">${calcularFrecuencia(opcCPU,aPSeg,aPSec).frecuenciaSegmentada} MHz</td>                
+                    <td style="color: white;">${calcularFrecuencia(opcCPU,aPSeg,aPSec).frecuenciaSecuencial} MHz</td>
                 </tr>                                
             </tbody>
         </table>   
@@ -196,12 +196,12 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     tablaTiempo.innerHTML = `
     <h5 class="mb-4 text-center">Tiempo de ejecución</h5>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Instrucción</th>
-                    <th scope="col">Tiempo ejecución segmentado</th>
-                    <th scope="col">Tiempo ejecución secuencial</th>
+                    <th style="color: white;" scope="col">Instrucción</th>
+                    <th style="color: white;" scope="col">Tiempo ejecución segmentado</th>
+                    <th style="color: white;" scope="col">Tiempo ejecución secuencial</th>
                 </tr>
             </thead>
             <tbody id="cuerpoTabla"></tbody>
@@ -210,11 +210,11 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     tablaEficiencia.innerHTML = `
     <h5 class="mb-4 text-center">Eficiencia</h5>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Instrucción</th>
-                    <th scope="col">Eficiencia</th>
+                    <th style="color: white;" scope="col">Instrucción</th>
+                    <th style="color: white;" scope="col">Eficiencia</th>
                 </tr>
             </thead>
             <tbody id="cuerpoTablaEficiencia"></tbody>
@@ -226,8 +226,8 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Instrucción</th>
-                    <th scope="col">Productividad</th>
+                    <th style="color: white;" scope="col">Instrucción</th>
+                    <th style="color: white;" scope="col">Productividad</th>
                 </tr>
             </thead>
             <tbody id="cuerpoTablaProductividad"></tbody>
@@ -236,10 +236,10 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     calculoProductividadMaxima.innerHTML = `
         <h5 class="mb-4 text-center">Productividad Máxima</h5>
-        <table class="table">
+        <table class="table table-striped">
             <tbody>
                 <tr>
-                    <td>${Math.round(calcularProductividadMaxima(t))} MIPS</td>                                
+                    <td style="color: white;">${Math.round(calcularProductividadMaxima(t))} MIPS</td>                                
                 </tr>                                
             </tbody>
         </table>
@@ -247,11 +247,11 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
 
     calculoGanancia.innerHTML = `
         <h5 class="mb-4 text-center">Ganancia de rendimiento</h5>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Instrucción</th>
-                    <th scope="col">Ganancia</th>
+                    <th style="color: white;" scope="col">Instrucción</th>
+                    <th style="color: white;" scope="col">Ganancia</th>
                 </tr>
             </thead>
             <tbody id="cuerpoTablaGanancia"></tbody>
@@ -259,48 +259,48 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
     `;  
 
     // for (var i = 0; i < k; i++) {
-    //     var copy = "<div style='height:20px; border:2px solid black;' class='m-5'>peinado</div>";
+    //     var copy = "<div style='height:20px; border:2px solid black;' class='m-5'></div>";
     //     grafico.innerHTML += copy;
     // }
   // Configuraciones de tamaño y posición
-    const ctx = grafico.getContext('2d');
-    grafico.width = 800;
-    grafico.height = 100;
+    // const ctx = grafico.getContext('2d');
+    // grafico.width = 800;
+    // grafico.height = 100;
 
-    const boxWidth = 50;
-    const boxHeight = 50;
-    const arrowWidth = 50;
-    const spaceBetween = 10;
+    // const boxWidth = 50;
+    // const boxHeight = 50;
+    // const arrowWidth = 50;
+    // const spaceBetween = 10;
 
-    let currentX = 10; // Inicio de dibujo
+    // let currentX = 10; // Inicio de dibujo
 
-    // Dibujar el primer elemento (flecha)
-    ctx.beginPath();
-    ctx.moveTo(currentX, 50);
-    ctx.lineTo(currentX + arrowWidth, 50);
-    ctx.stroke();
-    ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
-    currentX += arrowWidth + spaceBetween;
+    // // Dibujar el primer elemento (flecha)
+    // ctx.beginPath();
+    // ctx.moveTo(currentX, 50);
+    // ctx.lineTo(currentX + arrowWidth, 50);
+    // ctx.stroke();
+    // ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
+    // currentX += arrowWidth + spaceBetween;
 
-    for (let i = 0; i < k; i++) {
-        // Dibuja cuadro
-        ctx.strokeRect(currentX, 25, boxWidth, boxHeight);
-        ctx.fillText(`${Ti}`, currentX + 10, 60);
-        currentX += boxWidth + spaceBetween;
+    // for (let i = 0; i < k; i++) {
+    //     // Dibuja cuadro
+    //     ctx.strokeRect(currentX, 25, boxWidth, boxHeight);
+    //     ctx.fillText(`${Ti}`, currentX + 10, 60);
+    //     currentX += boxWidth + spaceBetween;
 
-        // Dibuja flecha
-        ctx.beginPath();
-        ctx.moveTo(currentX, 50);
-        ctx.lineTo(currentX + arrowWidth, 50);
-        ctx.stroke();
-        if (i < k - 1) {
-        ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
-        } else {
-        // Asegurarse de dibujar una última flecha apuntando a un siguiente no existente
-        ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
-        }
-        currentX += arrowWidth + spaceBetween;
-    }
+    //     // Dibuja flecha
+    //     ctx.beginPath();
+    //     ctx.moveTo(currentX, 50);
+    //     ctx.lineTo(currentX + arrowWidth, 50);
+    //     ctx.stroke();
+    //     if (i < k - 1) {
+    //     ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
+    //     } else {
+    //     // Asegurarse de dibujar una última flecha apuntando a un siguiente no existente
+    //     ctx.fillText(`${Tr}`, currentX + arrowWidth / 2 - 10, 40);
+    //     }
+    //     currentX += arrowWidth + spaceBetween;
+    // }
     
 
     
@@ -314,9 +314,9 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
         console.log('Instrucción', cantidadN[i]);
         const fila = document.createElement('tr');        
         fila.innerHTML = `
-            <td>${cantidadN[i]}</td>            
-            <td>${calcularTiempoSecuencial(cantidadN[i], t, k)} ns</td>
-            <td>${calcularTiempoSegmentado(cantidadN[i], t, k)} ns</td>
+            <td style="color: white;">${cantidadN[i]}</td>            
+            <td style="color: white;">${calcularTiempoSecuencial(cantidadN[i], t, k)} ns</td>
+            <td style="color: white;">${calcularTiempoSegmentado(cantidadN[i], t, k)} ns</td>
         `;
         cuerpoTabla.appendChild(fila);
     }
@@ -325,8 +325,8 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
         console.log('Instrucción', cantidadN[i]);
         const fila = document.createElement('tr');        
         fila.innerHTML = `
-            <td>${cantidadN[i]}</td>            
-            <td>${calcularEficiencia(cantidadN[i], k)}%</td>            
+            <td style="color: white;">${cantidadN[i]}</td>            
+            <td style="color: white;">${calcularEficiencia(cantidadN[i], k)}%</td>            
         `;
         cuerpoTablaEficiencia.appendChild(fila);
     }
@@ -335,8 +335,8 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
         console.log('Instrucción', cantidadN[i]);
         const fila = document.createElement('tr');        
         fila.innerHTML = `
-            <td>${cantidadN[i]}</td>            
-            <td>${calcularProductividad(cantidadN[i], t, k)} MIPS</td>            
+            <td style="color: white;">${cantidadN[i]}</td>            
+            <td style="color: white;">${calcularProductividad(cantidadN[i], t, k)} MIPS</td>            
         `;
         cuerpoTablaProductividad.appendChild(fila);
     }
@@ -345,8 +345,8 @@ function tablas(cantidadN, t, k, anchoPSec, opcCPU, Ti, Tr) {
         console.log('Instrucción', cantidadN[i]);
         const fila = document.createElement('tr');        
         fila.innerHTML = `
-            <td>${cantidadN[i]}</td>            
-            <td>${calcularGanancia(cantidadN[i], k)}</td>            
+            <td style="color: white;">${cantidadN[i]}</td>            
+            <td style="color: white;">${calcularGanancia(cantidadN[i], k)}</td>            
         `;
         cuerpoTablaGanancia.appendChild(fila);
     }
